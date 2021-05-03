@@ -8,7 +8,7 @@ const navOpen = document.querySelector('.nav-open');
 // });
 
 // timeLine
-// i can stop animation using pausing :true and it animates then when i want, if we leave oponly paused:true then the first click does not work
+// i can stop animation using pausing :true and it animates then when i want, if we leave only paused:true then the first click does not work
 // x its translateX
 const tl = new TimelineLite({ paused: true, reversed: true });
 // multiple animation
@@ -44,7 +44,7 @@ tl.to('.cover', 1, {
   );
 
 navButton.addEventListener('click', () => {
-  // to check if the animation is going and not able to break it when its running through many clicks
+  // to check if the animation is going and not able to break it when its running through multiple clicks
 
   if (tl.isActive()) {
     e.preventDefault();
@@ -55,7 +55,7 @@ navButton.addEventListener('click', () => {
   toggleTween(tl);
 });
 
-// going back, checks if the timeLIne is reversed or not. tween.play() is a function ;)
+// going back, checks if the timeLIne is reversed or not.
 
 function toggleTween(tween) {
   tween.reversed() ? tween.play() : tween.reverse();
